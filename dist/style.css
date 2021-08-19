@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Monseratt", sans-serif;
+  margin: 0 auto;
+  background-color: #ebebeb;
+  color: #263238;
+  width: 100%;
+}
+body a {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #263238;
+  text-decoration: none;
+}
+body button {
+  border: none;
+  background-color: #263238;
+  color: #CFD8DC;
+  border-radius: 10px;
+  padding: 20px 60px;
+  font-family: Abel;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 25px;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.015em;
+}
+body h1 {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 64px;
+  line-height: 78px;
+  margin: 0 auto;
+}
+body h2 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: -0.015em;
+}
+
+.head {
+  height: 50px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+.head .head__links {
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.head .head__links a {
+  transition: 300ms ease;
+}
+.head .head__links a:hover {
+  color: #fff;
+  background-color: #263238;
+}
+
+/************MAIN***************/
+.content {
+  display: flex;
+  flex-direction: column;
+}
+.content .hello__section {
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  justify-content: space-between;
+  background-color: #8fb6b39c;
+}
+.content .hello__section .hello__info {
+  background-color: #fff;
+  margin: 50px;
+  padding: 50px;
+  font-style: normal;
+  letter-spacing: -0.015em;
+}
+.content .hello__section .hello__info .hello__info-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+.content .hello__section .hello__info p {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 29px;
+  margin: 0 auto;
+}
+.content .hello__section .hello__info .hello__info-contacts {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.content .hello__section .hello__info .hello__info-contacts .hello__info-column1 p {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 29px;
+  text-transform: uppercase;
+  margin: 0 auto;
+  padding-top: 10px;
+}
+.content .hello__section .hello__info .hello__info-contacts .hello__info-column2 .links {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.content .hello__section .hello__info .hello__info-contacts .hello__info-column2 .links a {
+  padding-right: 10px;
+  padding-top: 10px;
+}
+.content .hello__section .hello__info .hello__info-contacts .hello__info-column2 p {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 29px;
+  text-transform: normal;
+  margin: 0 auto;
+  padding-top: 10px;
+}
+.content .hello__section .hello__aside {
+  flex-basis: 50%;
+  content: "";
+  background: url(images/hello-bg.png) no-repeat;
+  background-size: cover;
+  background-position: right;
+}
+.content .skills {
+  margin: 40px 0;
+  padding: 40px 50px;
+  background-color: #fff;
+}
+.content .skills .skills__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.content .skills .skills__content .skills__content-block {
+  flex-basis: 40%;
+  display: flex;
+  flex-direction: column;
+}
+.content .skills .skills__content .skills__content-block p {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: -0.015em;
+  text-align: left;
+  align-items: center;
+}
+.content .skills .skills__content .skills__content-block:last-child {
+  flex-basis: 20%;
+}
+.content .education {
+  margin: 40px 0;
+  padding: 40px 50px;
+  background-color: #fff;
+}
+.content .education .education__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.content .education .education__content .education__content-block {
+  flex-basis: 33.3%;
+  display: flex;
+  flex-direction: column;
+}
+.content .education .education__content .education__content-block p {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: -0.015em;
+  text-align: left;
+  align-items: center;
+}
