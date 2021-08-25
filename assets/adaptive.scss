@@ -1,0 +1,148 @@
+$body-color: #ebebeb;
+$primary: #263238;
+$secondary: #8fb6b39c;
+$tertiary: #fff;
+$quaternary: #CFD8DC;
+
+#burger-menu {
+    display: none;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    box-shadow: none;
+    border: transparent;
+    background-color: transparent;
+    box-sizing: content-box;
+    margin: 0;
+    padding: 0;
+    z-index: 4;
+
+    & span:nth-child(1) {
+        width: 5px;
+        height: 5px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: $primary;
+        transition: ease-in 300ms;
+    }
+
+    & span:nth-child(2) {
+        width: 5px;
+        height: 5px;
+        position: absolute;
+        top: 0;
+        left: 10px;
+        background-color: $primary;
+        transition: ease-in 300ms;
+    }
+
+    & span:nth-child(3) {
+        width: 5px;
+        height: 5px;
+        position: absolute;
+        top: 0;
+        left: 20px;
+        background-color: $primary;
+        transition: ease-in 300ms;
+    }
+
+    & span:nth-child(4) {
+        width: 5px;
+        height: 5px;
+        position: absolute;
+        top: 10px;
+        left: 0;
+        background-color: $primary;
+        transition: ease-in 300ms;
+    }
+
+    & span:nth-child(5) {
+        width: 5px;
+        height: 5px;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background-color: $primary;
+        transition: ease-in 300ms;
+    }
+
+    & span:nth-child(6) {
+        width: 5px;
+        height: 5px;
+        position: absolute;
+        top: 10px;
+        left: 20px;
+        background-color: $primary;
+        transition: ease-in 300ms;
+    }
+
+    & span:nth-child(7) {
+        width: 5px;
+        height: 5px;
+        position: absolute;
+        top: 20px;
+        left: 0;
+        background-color: $primary;
+        transition: ease-in 300ms;
+    }
+
+    & span:nth-child(8) {
+        width: 5px;
+        height: 5px;
+        position: absolute;
+        top: 20px;
+        left: 10px;
+        background-color: $primary;
+        transition: ease-in 300ms;
+    }
+
+    & span:nth-child(9) {
+        width: 5px;
+        height: 5px;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        background-color: $primary;
+        transition: ease-in 300ms;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    body {
+        .head {
+            flex-direction: row;
+            align-items: center;
+            position: relative;
+
+            #burger-menu {
+                display: block;
+                margin-right: 30px;
+            }
+
+            .head__links {
+                position: absolute;
+                top: 0;
+                left: -500px;
+                height: 100vh;
+                width: 300px;
+                background-color: $tertiary;
+                color: wheat;
+                display: flex;
+                flex-direction: column;
+                transition: 300ms ease;
+                a{
+                    text-align: center;
+                }
+            }
+
+            .head__links.open {
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+
+        
+    }
+}

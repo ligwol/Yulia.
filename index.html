@@ -1,22 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="dist/style.css">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <title>Document</title>
 </head>
+
 <body>
-    <header class="head">
-        <div class="head__links">
+    <header class="head" id="header-nav">
+        <div class="head__links" id="main-menu"">
             <a href="#hello">Hello</a>
             <a href="#skills">Skills</a>
             <a href="#education">Education</a>
             <a href="#portfolio">Portfolio</a>
             <a href="#contacts">Contacts</a>
         </div>
+        <button id="burger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </header>
 
     <main class="content">
@@ -45,12 +59,12 @@
                     </div>
                 </div>
                 <div class="hello__info-buttons">
-                    <button class="hello__button">Contact me</button>
-                    <button class="hello__button">Download CV</button>
+                    <a class="hello__button">Contact me</a>
+                    <a href="assets/my-cv.pdf" class="hello__button" >Download CV</a>
                 </div>
             </div>
             <div class="hello__aside">
-            <span></span>
+                <span></span>
             </div>
         </section>
 
@@ -65,7 +79,8 @@
                     </h2>
                     <p>
                         Adobe Photoshop, Adobe Illustrator, Figma, CorelDRAW. <br>
-                        Creating visual concept. Selecting colours, images and typefaces to convey a company’s brand and message.
+                        Creating visual concept. Selecting colours, images and typefaces to convey a company’s brand and
+                        message.
                     </p>
                 </div>
                 <div class="skills__content-block">
@@ -73,8 +88,10 @@
                         Frontend Development
                     </h2>
                     <p>
-                        HTML, CSS, SCSS, Bootstrap, Vue.js, Svelte, JavaScript, Node.js, GitHub, Wordpress, Webpack. <br>
-                        Creating the site template. Principels of cross-browser compatibility. Adabtive and responsive layout. 
+                        HTML, CSS, SCSS, Bootstrap, Vue.js, Svelte, JavaScript, Node.js, GitHub, Wordpress, Webpack.
+                        <br>
+                        Creating the site template. Principels of cross-browser compatibility. Adabtive and responsive
+                        layout.
                     </p>
                 </div>
                 <div class="skills__content-block">
@@ -82,7 +99,7 @@
                         Languages
                     </h2>
                     <p>
-                        Russian - Native <br> 
+                        Russian - Native <br>
                         Ukrainian - Proficient <br>
                         English - Intermediate
                     </p>
@@ -100,7 +117,8 @@
                         Frontend Developement Training
                     </h2>
                     <p>
-                        Learn the process of developing of web project, creating and working on site layout, basic knowledge of SEO.
+                        Learn the process of developing of web project, creating and working on site layout, basic
+                        knowledge of SEO.
                     </p>
                 </div>
                 <div class="education__content-block">
@@ -109,7 +127,7 @@
                     </h2>
                     <p>
                         Donetsk National University, Ukraine | 2019-2021<br>
-                        Master’s Degree 
+                        Master’s Degree
                     </p>
                 </div>
                 <div class="education__content-block">
@@ -124,8 +142,74 @@
             </div>
         </section>
 
+        <section class="portfolio" id="portfolio">
+            <h1>
+                Portfolio.
+            </h1>
+            <div class="portfolio__tabs">
+                <a href="#" class="portfolio__tabs-item" id="tabs-all">all projects</a>
+                <a href="#" class="portfolio__tabs-item" id="tabs-frontend">frontend</a>
+                <a href="#" class="portfolio__tabs-item" id="tabs-gd active">graphic design</a>
+            </div>
+            <div class="portfolio__slider">
+                <a href="#" class="slider-nav__prev"><i class="fas fa-angle-left"></i></a>
+                <div class="slider">
+                    <div class="slider-items">
+                        <div class="slider-items__slide active">
+                            <div class="slide__element front-end">
+                                <img src="images/Alpine_1.jpg" alt="IDT">
+                                <p>
+                                    Alpine
+                                </p>
+                            </div>
+                            <div class="slide__element front-end">
+                                <img src="images/IDT_1.jpg" alt="IDT">
+                                <p>IDT</p>
+                            </div>
+                            <div class="slide__element front-end">
+                                <img src="images/CloudBudget_1.jpg" alt="CloudBudget">
+                                <p>CloudBudget</p>
+                            </div>
+                        </div>
+                        <div class="slider-items__slide">
+                            <div class="slide__element front-end">
+                                <img src="images/Unvent_1.jpg" alt="Unvent">
+                                <p>Unvent</p>
+                            </div>
+                            <div class="slide__element graph-d">
+                                <img src="images/GraphDesig_1.jpg" alt="Calendar">
+                                <p>Calendar</p>
+                            </div>
+                            <div class="slide__element graph-d">
+                                <img src="images/GraphDesig_2.jpg" alt="Business Card">
+                                <p>Business Card</p>
+                            </div>
+                        </div>
+                        <div class="slider-items__slide">
+                            <div class="slide__element graph-d">
+                                <img src="images/GraphDesig_3.jpg" alt="CloudBudget">
+                                <p>Beauty Shop</p>
+                            </div>
+                            <div class="slide__element graph-d">
+                                <img src="images/GraphDesig_4.jpg" alt="Psychologycal Posters">
+                                <p>Psychologycal Posters</p>
+                            </div>
+                            <div class="slide__element graph-d">
+                                <img src="images/GraphDesig_5.jpg" alt="ProZa">
+                                <p>ProZa</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="slider-nav__next"><i class="fas fa-angle-right"></i></a>
+            </div>
+            <div class="slider-bullets"></div>
+        </section>
+
     </main>
-    
-    <script src="./dist/main.js"></script>
+
+    <script src="main.js"></script>
+
 </body>
+
 </html>

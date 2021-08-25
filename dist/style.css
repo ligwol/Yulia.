@@ -1,5 +1,132 @@
 @import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
+@keyframes CarouselSlide {}
+#burger-menu {
+  display: none;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  box-shadow: none;
+  border: transparent;
+  background-color: transparent;
+  box-sizing: content-box;
+  margin: 0;
+  padding: 0;
+  z-index: 4;
+}
+#burger-menu span:nth-child(1) {
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #263238;
+  transition: ease-in 300ms;
+}
+#burger-menu span:nth-child(2) {
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  background-color: #263238;
+  transition: ease-in 300ms;
+}
+#burger-menu span:nth-child(3) {
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  background-color: #263238;
+  transition: ease-in 300ms;
+}
+#burger-menu span:nth-child(4) {
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  background-color: #263238;
+  transition: ease-in 300ms;
+}
+#burger-menu span:nth-child(5) {
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #263238;
+  transition: ease-in 300ms;
+}
+#burger-menu span:nth-child(6) {
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  background-color: #263238;
+  transition: ease-in 300ms;
+}
+#burger-menu span:nth-child(7) {
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  background-color: #263238;
+  transition: ease-in 300ms;
+}
+#burger-menu span:nth-child(8) {
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  background-color: #263238;
+  transition: ease-in 300ms;
+}
+#burger-menu span:nth-child(9) {
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: #263238;
+  transition: ease-in 300ms;
+}
+
+@media screen and (max-width: 1100px) {
+  body .head {
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+  }
+  body .head #burger-menu {
+    display: block;
+    margin-right: 30px;
+  }
+  body .head .head__links {
+    position: absolute;
+    top: 0;
+    left: -500px;
+    height: 100vh;
+    width: 300px;
+    background-color: #fff;
+    color: wheat;
+    display: flex;
+    flex-direction: column;
+    transition: 300ms ease;
+  }
+  body .head .head__links a {
+    text-align: center;
+  }
+  body .head .head__links.open {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
 * {
   scroll-behavior: smooth;
 }
@@ -19,21 +146,6 @@ body a {
   line-height: 22px;
   color: #263238;
   text-decoration: none;
-}
-body button {
-  border: none;
-  background-color: #263238;
-  color: #CFD8DC;
-  border-radius: 10px;
-  padding: 20px 60px;
-  font-family: Abel;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 20px;
-  line-height: 25px;
-  display: flex;
-  align-items: center;
-  letter-spacing: -0.015em;
 }
 body h1 {
   font-family: "Montserrat";
@@ -99,6 +211,21 @@ body h2 {
   justify-content: space-between;
   padding-top: 10px;
 }
+.content .hello__section .hello__info .hello__info-buttons .hello__button {
+  border: none;
+  background-color: #263238;
+  color: #CFD8DC;
+  border-radius: 10px;
+  padding: 20px 60px;
+  font-family: Abel;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 25px;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.015em;
+}
 .content .hello__section .hello__info p {
   font-family: Montserrat;
   font-style: normal;
@@ -140,7 +267,7 @@ body h2 {
 .content .hello__section .hello__aside {
   flex-basis: 50%;
   content: "";
-  background: url(../images/hello-bg.png) no-repeat;
+  background: url(images/hello-bg.png) no-repeat;
   background-size: cover;
   background-position: right;
 }
@@ -197,3 +324,105 @@ body h2 {
   text-align: left;
   align-items: center;
 }
+.content .portfolio {
+  display: flex;
+  flex-direction: column;
+  margin: 40px 0;
+  padding: 40px 50px;
+  background-color: #fff;
+  justify-content: flex-start;
+}
+.content .portfolio h1 {
+  margin: 0;
+}
+.content .portfolio .portfolio__tabs {
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 2;
+  padding: 10px 0;
+  justify-content: flex-start;
+}
+.content .portfolio .portfolio__tabs a {
+  font-weight: 600;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.content .portfolio .portfolio__tabs a:hover {
+  color: #fff;
+  background-color: #263238;
+}
+.content .portfolio .portfolio__slider {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.content .portfolio .portfolio__slider .slider-nav__prev,
+.content .portfolio .portfolio__slider .slider-nav__next {
+  font-size: 50px;
+  flex-basis: 5%;
+  text-align: center;
+}
+.content .portfolio .portfolio__slider .slider {
+  flex-basis: 90%;
+}
+.content .portfolio .portfolio__slider .slider .slider-items {
+  position: relative;
+  height: 350px;
+}
+.content .portfolio .portfolio__slider .slider .slider-items .slider-items__slide {
+  display: none;
+  flex-direction: row;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  transition: 1000ms ease;
+}
+.content .portfolio .portfolio__slider .slider .slider-items .slider-items__slide p {
+  position: absolute;
+  top: 310px;
+}
+.content .portfolio .portfolio__slider .slider .slider-items .slider-items__slide.active {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-basis: 70%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+.content .portfolio .portfolio__slider .slider .slider-items .hide {
+  display: none;
+}
+.content .portfolio .portfolio__slider .slider i {
+  font-size: 50px;
+}
+.content .portfolio .slider-bullets {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 90vw;
+  height: 30px;
+  background-color: #fff;
+}
+.content .portfolio .slider-bullets a {
+  width: 30px;
+  height: 5px;
+  border-radius: 10px;
+  background-color: #B0BEC5;
+  transition: 300ms ease;
+  margin: 0 5px;
+}
+.content .portfolio .slider-bullets a.active {
+  width: 8px;
+  height: 5px;
+  border-radius: 10px;
+  background-color: #78909C;
+}
+
+/*************MOBILE***********/
