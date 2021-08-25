@@ -267,7 +267,7 @@ body h2 {
 .content .hello__section .hello__aside {
   flex-basis: 50%;
   content: "";
-  background: url(images/hello-bg.png) no-repeat;
+  background: url(../images/hello-bg.png) no-repeat;
   background-size: cover;
   background-position: right;
 }
