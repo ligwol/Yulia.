@@ -113,7 +113,6 @@
     height: 100vh;
     width: 300px;
     background-color: #fff;
-    color: wheat;
     display: flex;
     flex-direction: column;
     transition: 300ms ease;
@@ -125,6 +124,29 @@
     position: absolute;
     top: 0;
     left: 0;
+  }
+  body .content .hello__section {
+    display: flex;
+    flex-direction: column;
+  }
+  body .content .hello__section .hello__info {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  body .content .hello__section .hello__info .hello__info-contacts {
+    justify-content: center;
+    align-items: center;
+  }
+  body .content .hello__section .hello__info .hello__info-contacts .hello__info-column1 {
+    text-align: left;
+  }
+  body .content .hello__section .hello__info .hello__info-contacts .hello__info-column2 {
+    text-align: right;
+  }
+  body .content .skills .skills__content, body .content .skills .education__content, body .content .education .skills__content, body .content .education .education__content {
+    display: flex;
+    flex-direction: column;
   }
 }
 * {
@@ -426,3 +448,151 @@ body h2 {
 }
 
 /*************MOBILE***********/
+#burger-menu {
+  display: none;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  box-shadow: none;
+  border: transparent;
+  background-color: transparent;
+  box-sizing: content-box;
+  margin: 0;
+  padding: 0;
+  z-index: 4;
+}
+#burger-menu span:nth-child(1) {
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #263238;
+  transition: ease-in 300ms;
+}
+#burger-menu span:nth-child(2) {
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  background-color: #263238;
+  transition: ease-in 300ms;
+}
+#burger-menu span:nth-child(3) {
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  background-color: #263238;
+  transition: ease-in 300ms;
+}
+#burger-menu span:nth-child(4) {
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  background-color: #263238;
+  transition: ease-in 300ms;
+}
+#burger-menu span:nth-child(5) {
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #263238;
+  transition: ease-in 300ms;
+}
+#burger-menu span:nth-child(6) {
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  background-color: #263238;
+  transition: ease-in 300ms;
+}
+#burger-menu span:nth-child(7) {
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  background-color: #263238;
+  transition: ease-in 300ms;
+}
+#burger-menu span:nth-child(8) {
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  background-color: #263238;
+  transition: ease-in 300ms;
+}
+#burger-menu span:nth-child(9) {
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: #263238;
+  transition: ease-in 300ms;
+}
+
+@media screen and (max-width: 1100px) {
+  body .head {
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+  }
+  body .head #burger-menu {
+    display: block;
+    margin-right: 30px;
+  }
+  body .head .head__links {
+    position: absolute;
+    top: 0;
+    left: -500px;
+    height: 100vh;
+    width: 300px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    transition: 300ms ease;
+  }
+  body .head .head__links a {
+    text-align: center;
+  }
+  body .head .head__links.open {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  body .content .hello__section {
+    display: flex;
+    flex-direction: column;
+  }
+  body .content .hello__section .hello__info {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  body .content .hello__section .hello__info .hello__info-contacts {
+    justify-content: flex-start;
+    align-items: center;
+  }
+  body .content .hello__section .hello__info .hello__info-contacts .hello__info-column1 {
+    text-align: left;
+  }
+  body .content .hello__section .hello__info .hello__info-contacts .hello__info-column2 {
+    text-align: right;
+  }
+  body .content .skills .skills__content, body .content .skills .education__content, body .content .education .skills__content, body .content .education .education__content {
+    display: flex;
+    flex-direction: column;
+  }
+}
