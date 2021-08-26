@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
-@import 'assets/animation.scss';
-@import 'assets/adaptive.scss';
+
 
 $body-color: #ebebeb;
 $primary: #263238;
@@ -521,13 +520,88 @@ body {
           }
           .portfolio{
               .portfolio__slider{
+                .slider-nav__prev, .slider-nav__next{
+                  font-size: 30px;
+                }
                   .slider{
+                    .slider-items{
+                      height: 150px;
                       .slider-items__slide.active{
-                          
+                          display: flex;
+                          flex-direction: row;
+                          .slide__element{
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            img{
+                              width: 100px;
+                              height: 100px;
+                            }
+                            p{
+                              position: absolute;
+                              top: 0;
+                              display: none;
+                            }
+                          }
+                        
                       }
+                    }
                   }
               }
           }
       }
+  }
+}
+
+@media screen and (max-width: 620px){
+  body {
+    h1{
+      font-size: 40px;
+      line-height: 50px;
+    }
+    .content{
+      .hello__section{
+        .hello__info{
+          padding: 10px;
+          margin: 10px auto;
+          width: 250px;
+          p{
+            font-size: 16px;
+          }
+          .hello__info-buttons{
+            display: flex;
+            flex-direction: column;
+            .hello__button{
+              padding: 10px;
+              margin-bottom: 10px;
+              background-color: $primary;
+            }
+          }
+        }
+      } 
+      .portfolio{
+        justify-content: space-between;
+        h1{
+          flex-grow: 1;
+        }
+        .portfolio__slider{
+          flex-grow: 3;
+          .slider {
+            .slider-items {
+              .slider-items__slide{
+                &.active{
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  img{
+                    width: 100px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    } 
   }
 }
