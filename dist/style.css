@@ -208,27 +208,12 @@ body h2 {
 .content .portfolio h1 {
   margin: 0;
 }
-.content .portfolio .portfolio__tabs {
-  display: flex;
-  flex-direction: row;
-  flex-shrink: 2;
-  padding: 10px 0;
-  justify-content: flex-start;
-}
-.content .portfolio .portfolio__tabs a {
-  font-weight: 600;
-  font-size: 16px;
-  text-transform: uppercase;
-}
-.content .portfolio .portfolio__tabs a:hover {
-  color: #fff;
-  background-color: #263238;
-}
 .content .portfolio .portfolio__slider {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  margin-top: 30px;
 }
 .content .portfolio .portfolio__slider .slider-nav__prev,
 .content .portfolio .portfolio__slider .slider-nav__next {
@@ -241,7 +226,7 @@ body h2 {
 }
 .content .portfolio .portfolio__slider .slider .slider-items {
   position: relative;
-  height: 350px;
+  height: 380px;
 }
 .content .portfolio .portfolio__slider .slider .slider-items .slider-items__slide {
   display: none;
@@ -253,20 +238,48 @@ body h2 {
   bottom: 0;
   transition: 1000ms ease;
 }
-.content .portfolio .portfolio__slider .slider .slider-items .slider-items__slide p {
-  position: absolute;
-  top: 310px;
+.content .portfolio .portfolio__slider .slider .slider-items .slider-items__slide .slide__element2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.content .portfolio .portfolio__slider .slider .slider-items .slider-items__slide .slide__element2 h3 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  margin: 0;
+  padding: 0;
+}
+.content .portfolio .portfolio__slider .slider .slider-items .slider-items__slide .slide__element2 h3 a i {
+  font-size: 22px;
+}
+.content .portfolio .portfolio__slider .slider .slider-items .slider-items__slide .slide__element2 p {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: -0.015em;
+  margin: 0;
+  padding: 0;
 }
 .content .portfolio .portfolio__slider .slider .slider-items .slider-items__slide.active {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-basis: 70%;
   position: absolute;
   top: 0;
   right: 0;
   left: 0;
   bottom: 0;
+}
+.content .portfolio .portfolio__slider .slider .slider-items .slider-items__slide.active .slide__element1 {
+  flex-basis: 30%;
+}
+.content .portfolio .portfolio__slider .slider .slider-items .slider-items__slide.active .slide__element2 {
+  flex-basis: 50%;
 }
 .content .portfolio .portfolio__slider .slider .slider-items .hide {
   display: none;
@@ -433,7 +446,7 @@ body h2 {
     margin-right: auto;
   }
   body .content .hello__section .hello__info .hello__info-contacts {
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
   }
   body .content .hello__section .hello__info .hello__info-contacts .hello__info-column1 {
@@ -442,47 +455,55 @@ body h2 {
   body .content .hello__section .hello__info .hello__info-contacts .hello__info-column2 {
     text-align: right;
   }
-  body .content .skills .skills__content, body .content .skills .education__content, body .content .education .skills__content, body .content .education .education__content {
+  body .content .skills .skills__content,
+body .content .skills .education__content,
+body .content .education .skills__content,
+body .content .education .education__content {
     display: flex;
     flex-direction: column;
   }
-  body .content .portfolio .portfolio__slider .slider-nav__prev, body .content .portfolio .portfolio__slider .slider-nav__next {
+}
+@media screen and (max-width: 900px) {
+  body .portfolio {
+    justify-content: space-between;
+  }
+  body .portfolio .portfolio__slider {
+    margin-top: 0;
+  }
+  body .portfolio .portfolio__slider .slider-nav__prev i, body .portfolio .portfolio__slider .slider-nav__next i {
     font-size: 30px;
   }
-  body .content .portfolio .portfolio__slider .slider .slider-items {
-    height: 150px;
-  }
-  body .content .portfolio .portfolio__slider .slider .slider-items .slider-items__slide.active {
+  body .portfolio .portfolio__slider .slider .slider-items .slider-items__slide.active {
     display: flex;
-    flex-direction: row;
-  }
-  body .content .portfolio .portfolio__slider .slider .slider-items .slider-items__slide.active .slide__element {
-    display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
   }
-  body .content .portfolio .portfolio__slider .slider .slider-items .slider-items__slide.active .slide__element img {
-    width: 100px;
-    height: 100px;
-  }
-  body .content .portfolio .portfolio__slider .slider .slider-items .slider-items__slide.active .slide__element p {
-    position: absolute;
-    top: 0;
-    display: none;
+  body .portfolio .portfolio__slider .slider .slider-items .slider-items__slide.active img {
+    width: 200px;
   }
 }
 @media screen and (max-width: 620px) {
-  body h1 {
-    font-size: 40px;
-    line-height: 50px;
-  }
   body .content .hello__section .hello__info {
     padding: 10px;
     margin: 10px auto;
     width: 250px;
   }
+  body .content .hello__section .hello__info h1 {
+    font-size: 40px;
+    line-height: 50px;
+  }
   body .content .hello__section .hello__info p {
-    font-size: 16px;
+    font-size: 14px;
+  }
+  body .content .hello__section .hello__info .hello__info-contacts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  body .content .hello__section .hello__info .hello__info-contacts .hello__info-column2 .links {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
   }
   body .content .hello__section .hello__info .hello__info-buttons {
     display: flex;
@@ -493,11 +514,18 @@ body h2 {
     margin-bottom: 10px;
     background-color: #263238;
   }
+  body .content .skills h1, body .content .education h1 {
+    font-size: 40px;
+    line-height: 50px;
+  }
   body .content .portfolio {
     justify-content: space-between;
+    padding: 20px;
   }
   body .content .portfolio h1 {
     flex-grow: 1;
+    font-size: 40px;
+    line-height: 50px;
   }
   body .content .portfolio .portfolio__slider {
     flex-grow: 3;
@@ -508,6 +536,6 @@ body h2 {
     align-items: center;
   }
   body .content .portfolio .portfolio__slider .slider .slider-items .slider-items__slide.active img {
-    width: 100px;
+    width: 200px;
   }
 }
