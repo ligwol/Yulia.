@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
 
 $body-color: #ebebeb;
 $primary: #263238;
@@ -53,7 +53,7 @@ body {
   background-color: $tertiary;
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
 
   .head__links {
@@ -65,6 +65,16 @@ body {
     a {
       transition: 300ms ease;
 
+      &:hover {
+        color: $tertiary;
+        background-color: $primary;
+      }
+    }
+  }
+  .head__language {
+    padding-left: 30px;
+    a {
+      transition: 300ms ease;
       &:hover {
         color: $tertiary;
         background-color: $primary;
@@ -100,13 +110,14 @@ body {
         flex-direction: row;
         justify-content: space-between;
         padding-top: 10px;
+        
         .hello__button {
           border: none;
           background-color: $primary;
           color: $quaternary;
           border-radius: 10px;
           padding: 20px 60px;
-          font-family: Abel;
+          font-family: 'Abel', 'Open Sans Condensed', sans-serif;
           font-style: normal;
           font-weight: normal;
           font-size: 20px;
